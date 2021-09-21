@@ -1,0 +1,139 @@
+########################################################################################
+NOTE: Before you copy and paste below streaming telemetry configuration for the 9800...
+Replace 10.0.0.34 with the management IP of your 9800
+Replace 10.0.0.97 with the IP address of the host device that will ingest telemetry data
+########################################################################################
+
+telemetry ietf subscription 10
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/traffic-stats
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 11
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dc-info
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 12
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/sisf-db-mac
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 13
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/dot11-oper-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 14
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/radio-oper-stats
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 15
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/ap-name-mac-map
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 16
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/capwap-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 17
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/radio-oper-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 18
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/ap-radio-neighbor
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 19
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/common-oper-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 20
+ encoding encode-kvgpb
+ filter xpath /wireless-rrm-oper:rrm-oper-data/rrm-measurement
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 21
+ encoding encode-kvgpb
+ filter xpath /wireless-mobility-oper:mobility-oper-data/mobility-node-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 22
+ encoding encode-kvgpb
+ filter xpath /wireless-mobility-oper:mobility-oper-data/wlan-client-limit
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 23
+ encoding encode-kvgpb
+ filter xpath /wireless-client-oper:client-oper-data/mm-if-client-history/mobility-history/entry
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 24
+ encoding encode-kvgpb
+ filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 25
+ encoding encode-kvgpb
+ filter xpath /memory-ios-xe-oper:memory-statistics/memory-statistic
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 26
+ encoding encode-kvgpb
+ filter xpath /wireless-access-point-oper:access-point-oper-data/oper-data
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 27
+ encoding encode-kvgpb
+ filter xpath /wireless-event-oper:wsa-client-event
+ source-address 10.0.0.34
+ stream yang-notif-native
+ update-policy on-change
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp
+telemetry ietf subscription 28
+ encoding encode-kvgpb
+ filter xpath /wireless-general-oper:general-oper-data/mfp-stats
+ source-address 10.0.0.34
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address 10.0.0.97 57000 protocol grpc-tcp

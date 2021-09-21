@@ -1,0 +1,59 @@
+version: '3'
+services:
+  influxdb:
+    image: influxdb:latest
+    restart: unless-stopped
+    container_name: influxdb
+    volumes:
+      # Mount for influxdb data directory and configuration
+      - /Users/bcho/documents/docker/tig/influxdb2/config:/etc/influxdb2
+      - /Users/bcho/documents/docker/tig/influxdb2/data:/var/lib/influxdb2
+    ports:
+      - "8086:8086"
+    networks:
+      - influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=telegraf
+      - DOCKER_INFLUXDB_INIT_PASSWORD=cisco123
+      - DOCKER_INFLUXDB_INIT_ORG=bcho.com
+      - DOCKER_INFLUXDB_INIT_BUCKET=9800
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=cisco123
+  telegraf:
+    image: telegraf:latest
+    restart: unless-stopped
+    container_name: telegraf
+    networks:
+      - influxdb
+    ports:
+      - "57000:57000"
+      - "7514:7514"
+    volumes:
+      # Mount for telegraf config
+      - /Users/bcho/documents/docker/tig/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+  grafana:
+    image: grafana/grafana:7.5.5-ubuntu
+    restart: unless-stopped
+    container_name: grafana
+    networks:
+      - influxdb
+    ports:
+      - "3000:3000"
+  syslog-ng:
+    image: balabit/syslog-ng:latest
+    restart: unless-stopped
+    container_name: syslog-ng
+    networks:
+      - influxdb
+    ports:
+      - "514:514/udp"
+      - "601:601"
+    volumes:
+      - /Users/bcho/documents/docker/tig/syslog-ng/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf
+      - /Users/bcho/documents/docker/tig/syslog-ng/logs:/var/log
+    command: ["--no-caps"]
+networks:
+  influxdb:
+    name: influxdb
