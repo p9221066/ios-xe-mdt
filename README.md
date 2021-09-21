@@ -7,4 +7,21 @@ Instructions:
 
 2. On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto the directory (either root or your custom directory).
  
-3. 
+3. Modify "docker-compose.yml" file (ie. Volume section for each container) to point to the directory where you stored "telegraf.con" and "syslog-ng.conf".
+
+4. Launch the containers using command
+
+docker-compose up -d
+
+5. Access Grafana GUI using the default 'admin/admin' credential.  You will be asked to change the password.
+
+6. You then need do setup your Influxdb datastore.  Use the following settings.
+
+Query Language - Flux
+HTTP URL - http://influxdb:8086
+AUTH Basic Auth - Disable
+Organisation - bcho.com
+Token - cisco123
+Bucket - 9800
+
+7. Next you will need import the sample dashboards "
