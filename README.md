@@ -24,4 +24,6 @@ Organisation - bcho.com
 Token - cisco123
 Bucket - 9800
 
-7. Next you will need import the sample dashboards "
+7. Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
+
+You are done!  You should now see the 9800 streaming telemetry.
