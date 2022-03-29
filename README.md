@@ -2,21 +2,21 @@
 
 Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 
-## Instructions:
+## 1. Instructions:
 
 #### Configuration on the 9800
 
 Open the "9800_telemetry_config_template.txt" file, edit the source and destination IP address to suit your test environment, then copy and paste onto the running configuration of the 9800 (tested with IOS-XE 17.3.3).
 
-#### Copy and paste initial configs for Docker containers
+#### 2. Copy and paste initial configs for Docker containers
 
 On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  I strongly recommend that you create a separate directory under your root directory path called telegraf, syslog-ng and influxdb2.
 
-#### Edit the docker-compose.yml file
+#### 3. Edit the docker-compose.yml file
 
 In "docker-compose.yml" file, replace <root-directory-path> with your local directory path name.
 
-#### Launch the containers
+#### 4. Launch the containers
 
 Launch the containers using the command
 
@@ -78,11 +78,11 @@ Creating syslog-ng ... done
 Creating influxdb  ... done
 Creating telegraf  ... done
 
-#### Initial settings for Grafana
+#### 5. Initial settings for Grafana
  
 Access Grafana GUI using the default 'admin/admin' credential.  You will be asked to change the password.
 
-#### Initial settings for Influxdb
+#### 6. Initial settings for Influxdb
  
 You then need do setup your Influxdb datastore.  Use the following settings.
 
@@ -94,8 +94,8 @@ Token - cisco123
 Bucket - 9800
 
 
-#### Import Pre-Built Dashboards
+#### 7. Import Pre-Built Dashboards
  
 Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
 
-You should now see the 9800 streaming telemetry in Grafana.  Your next step in the journey would be to create your own very own dashboards by discovering other subscriptions.  Good luck!
+You should now see the 9800 streaming telemetry in Grafana.  Now it's your turn to create your own dashboards.  Good luck!
