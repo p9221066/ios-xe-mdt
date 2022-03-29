@@ -1,11 +1,11 @@
 # ios-xe-mdt
-Wireless network monitoring using Cisco 9800+Model Driven Telemetry+Docker+TIG Stack.
+Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 
 Instructions:
 
 1. Open the "9800_telemetry_config_template.txt" file, edit the source and destination IP address to suit your test environment, then copy and paste onto the running configuration of the 9800 (tested with IOS-XE 17.3.3).
 
-2. On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto the directory (either root or your custom directory).
+2. On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  I strongly recommend that you create a separate directory for telegraf, syslog-ng and influxdb.
  
 3. Modify "docker-compose.yml" file (ie. Volume section for each container) to point to the directory where you stored "telegraf.con" and "syslog-ng.conf".
 
