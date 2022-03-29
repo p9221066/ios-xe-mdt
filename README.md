@@ -87,10 +87,15 @@ Access Grafana GUI using the default 'admin/admin' credential.  You will be aske
 You then need do setup your Influxdb datastore.  Use the following settings.
 
 Query Language - Flux
+  
 HTTP URL - http://influxdb:8086
+  
 AUTH Basic Auth - Disable
+  
 Organisation - bcho.com
+  
 Token - cisco123
+  
 Bucket - 9800
 
 
