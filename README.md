@@ -10,7 +10,7 @@ Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
  
 3. In "docker-compose.yml" file, replace <root-directory-path> with your local directory path name.
 
-4. Launch the containers using command
+4. Launch the containers using the command
 
 docker-compose up -d
 
