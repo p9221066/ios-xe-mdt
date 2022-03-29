@@ -6,8 +6,8 @@ services:
     container_name: influxdb
     volumes:
       # Mount for influxdb data directory and configuration
-      - /Users/bcho/documents/docker/tig/influxdb2/config:/etc/influxdb2
-      - /Users/bcho/documents/docker/tig/influxdb2/data:/var/lib/influxdb2
+      - /<root-directory-path>/influxdb2/config:/etc/influxdb2
+      - <root-directory-path>/influxdb2/data:/var/lib/influxdb2
     ports:
       - "8086:8086"
     networks:
@@ -30,11 +30,11 @@ services:
       - "7514:7514"
     volumes:
       # Mount for telegraf config
-      - /Users/bcho/documents/docker/tig/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /<root-directory-path>/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
       - influxdb
   grafana:
-    image: grafana/grafana:7.5.5-ubuntu
+    image: grafana/grafana
     restart: unless-stopped
     container_name: grafana
     networks:
@@ -51,8 +51,8 @@ services:
       - "514:514/udp"
       - "601:601"
     volumes:
-      - /Users/bcho/documents/docker/tig/syslog-ng/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf
-      - /Users/bcho/documents/docker/tig/syslog-ng/logs:/var/log
+      - /<root-directory-path>/syslog-ng/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf
+      - /<root-directory-path>/syslog-ng/logs:/var/log
     command: ["--no-caps"]
 networks:
   influxdb:
