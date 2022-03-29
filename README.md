@@ -4,19 +4,19 @@ Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 
 ## Instructions:
 
-### Step 1
+#### Step 1
 
 Open the "9800_telemetry_config_template.txt" file, edit the source and destination IP address to suit your test environment, then copy and paste onto the running configuration of the 9800 (tested with IOS-XE 17.3.3).
 
-### Step 2
+#### Step 2
 
 On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  I strongly recommend that you create a separate directory under your root directory path called telegraf, syslog-ng and influxdb2.
 
-### Step 3
+#### Step 3
 
 In "docker-compose.yml" file, replace <root-directory-path> with your local directory path name.
 
-### Step 4
+#### Step 4
 
 Launch the containers using the command
 
@@ -78,11 +78,11 @@ Creating syslog-ng ... done
 Creating influxdb  ... done
 Creating telegraf  ... done
 
-### Step 5
+#### Step 5
  
 Access Grafana GUI using the default 'admin/admin' credential.  You will be asked to change the password.
 
-### Step 6
+#### Step 6
  
 You then need do setup your Influxdb datastore.  Use the following settings.
 
@@ -94,7 +94,7 @@ Token - cisco123
 Bucket - 9800
 
 
-### Step 7
+#### Step 7
  
 Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
 
