@@ -76,7 +76,7 @@ Creating telegraf  ... done
 
 Query Language - Flux
 
-HTTP URL - http://influxdb:8086
+HTTP URL - [http://influxdb:8086]
 
 AUTH Basic Auth - Disable
 
