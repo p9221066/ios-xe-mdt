@@ -13,8 +13,8 @@ Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 4. Launch the containers using command
 
 docker-compose up -d
- 
- and you should see the following output.
+
+and you should see the following output.
  
 bcho@bcho-ubuntu-2:~$ sudo docker-compose up -d
 Pulling grafana (grafana/grafana:latest)...
