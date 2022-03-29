@@ -1,4 +1,4 @@
-# ios-xe-mdt
+# IOS-XE-MDT
 
 Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 
