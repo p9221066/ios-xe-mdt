@@ -18,11 +18,17 @@ docker-compose up -d
 6. You then need do setup your Influxdb datastore.  Use the following settings.
 
 Query Language - Flux
+
 HTTP URL - http://influxdb:8086
+
 AUTH Basic Auth - Disable
+
 Organisation - bcho.com
+
 Token - cisco123
+
 Bucket - 9800
+
 
 7. Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
 
