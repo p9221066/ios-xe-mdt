@@ -2,9 +2,9 @@
 
 Wireless network monitoring using Cisco 9800 Streaming Telemetry, Docker and TIG
 
-## 1. Instructions:
+## Instructions:
 
-#### Configuration on the 9800
+#### 1. Configuration on the 9800
 
 Open the "9800_telemetry_config_template.txt" file, edit the source and destination IP address to suit your test environment, then copy and paste onto the running configuration of the 9800 (tested with IOS-XE 17.3.3).
 
