@@ -10,7 +10,7 @@ Open the "9800_telemetry_config_template.txt" file, edit the source and destinat
 
 #### 2. Copy and paste initial configs for Docker containers
 
-On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  I strongly recommend that you create a separate directory under your root directory path called telegraf, syslog-ng and influxdb2.
+On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  Create a separate directory under your root directory path called telegraf, syslog-ng and influxdb2.
 
 #### 3. Edit the docker-compose.yml file
 
