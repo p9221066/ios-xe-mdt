@@ -7,7 +7,7 @@ services:
     volumes:
       # Mount for influxdb data directory and configuration
       - /<root-directory-path>/influxdb2/config:/etc/influxdb2
-      - <root-directory-path>/influxdb2/data:/var/lib/influxdb2
+      - /<root-directory-path>/influxdb2/data:/var/lib/influxdb2
     ports:
       - "8086:8086"
     networks:
