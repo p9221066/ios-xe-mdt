@@ -24,7 +24,7 @@ In "docker-compose.yml" file, replace <root-directory-path> with your local dire
 
 Launch the containers using the command
 
-docker-compose up -d
+sudo docker-compose up -d
 
 and you should see the following output.
  
