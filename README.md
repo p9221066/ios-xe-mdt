@@ -102,4 +102,9 @@ Bucket - 9800
  
 Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
 
-You should now see the 9800 streaming telemetry in Grafana.  Now it's your turn to create your own dashboards.  Good luck!
+You should now see the 9800 streaming telemetry in action through Grafana dashboards.
+
+
+#### 9. Python Integration
+ 
+I have also added a sample python script called 'bcho_ap_beacon_extractor.py' which monitors the tx beacon count of an AP.  When you run the script, it will ask for the IP address of the AP and admin credentials.  This example was included to demonstrate to you that you can pretty much monitor anything out of the 9800 or AP and inject the data into TIG solution for visualization.
