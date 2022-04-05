@@ -446,8 +446,8 @@
       {
         "current": {
           "selected": true,
-          "text": "9800-1",
-          "value": "9800-1"
+          "text": "9800",
+          "value": "9800"
         },
         "datasource": {
           "type": "influxdb",
