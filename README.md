@@ -16,6 +16,8 @@ On the host machine where you intend to run Docker containers, you will need to 
 
 On the host machine where you will build your containers, copy the "docker-compose.yml", "telegraf.conf" and "syslog-ng.conf" file onto their respective directory.  Create a separate directory under your root directory path called telegraf, syslog-ng and influxdb2.
 
+Please modify the syslog destination IP in the "syslog-ng.conf" file to the host device IP where you will run the syslog-ng container.
+
 #### 4. Edit the docker-compose.yml file
 
 In "docker-compose.yml" file, replace <root-directory-path> with your local directory path name.
