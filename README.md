@@ -83,7 +83,7 @@ Creating grafana   ... done
 Creating syslog-ng ... done 
 Creating influxdb  ... done 
 Creating telegraf  ... done
-
+ 
 #### 6. Initial settings for Grafana
  
 Access Grafana GUI using the default 'admin/admin' credential.  You will be asked to change the password.
