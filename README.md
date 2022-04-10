@@ -108,4 +108,4 @@ You should now see the 9800 streaming telemetry in action through Grafana dashbo
 
 #### 9. Python Integration
  
-I have also added a sample python script called 'bcho_ap_beacon_extractor.py' which monitors the tx beacon count of an AP.  When you run the script, it will ask for the IP address of the AP and admin credentials.  This example was included to demonstrate to you that you can pretty much monitor anything out of the 9800 or AP and inject the data into TIG solution for visualization.
+I have also added a sample python script called 'bcho_ap_beacon_extractor.py' which monitors the tx beacon count of an AP.  When you run the script, it will ask for the IP address of the AP and admin credentials.  This example was included to demonstrate to you that you can pretty much monitor anything out of the 9800 or AP and inject the data into TIG solution for visualization..
