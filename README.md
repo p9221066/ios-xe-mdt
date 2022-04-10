@@ -99,7 +99,6 @@ Organisation - bcho.com
 Token - cisco123  
 Bucket - 9800
 
-
 #### 8. Import Pre-Built Dashboards
  
 Next, import the sample dashboards "9800_wifi_telemetry_dashboard_template.json" and "9800_syslog_dashboard.json".
