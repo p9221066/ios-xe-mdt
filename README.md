@@ -29,7 +29,8 @@ Launch the containers using the command
 sudo docker-compose up -d
 
 and you should see the following output.
- 
+
+```
 bcho@bcho-ubuntu-2:~$ sudo docker-compose up -d 
 Pulling grafana (grafana/grafana:latest)... 
 latest: Pulling from grafana/grafana 
@@ -83,6 +84,7 @@ Creating grafana   ... done
 Creating syslog-ng ... done 
 Creating influxdb  ... done 
 Creating telegraf  ... done
+```
  
 #### 6. Initial settings for Grafana
  
